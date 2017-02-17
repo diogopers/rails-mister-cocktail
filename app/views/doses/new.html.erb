@@ -1,2 +1,7 @@
-<h1>Doses#new</h1>
-<p>Find me in app/views/doses/new.html.erb</p>
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+  <%= f.input :ingredient_id, as: :select, collection: @ingredients, prompt: "Choose ingredient" %>
+  <%= f.input :description %>
+  <%= f.input :cocktail_id, as: :hidden, value: @cocktail.id %>
+  <%= f.button :submit, "Create dose!", class: "btn-primary" %>
+  <%= link_to "Back", cocktails_path(@cocktail), class: "btn btn-primary" %>
+<% end %>
