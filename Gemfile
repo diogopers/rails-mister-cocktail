@@ -7,6 +7,9 @@ end
 
 ruby '2.3.3'
 gem 'figaro'
+gem 'cloudinary'#, '1.1.0'
+gem 'carrierwave', '~> 0.11.2'
+
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'simple_form'
